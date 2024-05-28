@@ -12,25 +12,20 @@ public class Main {
         System.out.println("               BBVA         BANCOMER                ");
         System.out.println("----------------------------------------------------");
         System.out.println("       POR FAVOR INGRESA TU NUMERO DE TARJETA       ");
-        String Targeta = entrada.nextLine();
-        if(Targeta.equals("1010101010101010")) {
+        String Tarjeta = entrada.nextLine();
+        if(Tarjeta.equals("1010101010101010")) {
             System.out.println("====================================================");
             Clase_Abstractaa operador = new MenuOperador();
             operador.Transacciones();
-        }/*else if (Targeta.equals(getNombre())){
+        } else if (Tarjeta.equals(MenuOperador.getTarjeta())) {
             System.out.println("====================================================");
-            Clase_Abstractaa mesajero = new MenuCliente();
-            mesajero.Operaciones();
-        }*/else {
+            Clase_Abstractaa cliente = new MenuCliente();
+            cliente.Transacciones();
+        }else {
         	System.out.println("===============================================");
             System.out.println("Alguno de sus datos es erroneo, intente denuevo");
         	System.out.println("===============================================");
-   
         }
-
     }
-    /*private static Object getNombre() {
-        throw new UnsupportedOperationException("Unimplemented method 'getNombre'");
-    }*/
 }
 
