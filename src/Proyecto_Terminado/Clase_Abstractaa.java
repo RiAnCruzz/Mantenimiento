@@ -1,5 +1,7 @@
 package Proyecto_Terminado;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 public abstract class Clase_Abstractaa {
 	String numero_cuenta;
@@ -10,11 +12,14 @@ public abstract class Clase_Abstractaa {
     public void Operaciones() {
         int bandera = 0;
         int seleccion = 0;
+        Date Fecha = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        String FechaActual = sdf.format(Fecha);
         String Nombre = "";
         do {
             do {
                 System.out.println(" Buenas tardes esta en un cajero automatico de BBVA");
-                System.out.println(" Hoy es 31/10/2023");
+                System.out.println(" Fecha " + FechaActual);
                 System.out.println(" Porfavor seleccione una opción:");
                 System.out.println("    1. Consulta de saldo.");
                 System.out.println("    2. Retiro de efectivo.");
@@ -45,9 +50,9 @@ public abstract class Clase_Abstractaa {
             	Clase_Abstractaa mensajero = new Transferencia();
                 mensajero.Transacciones();
             } else if(seleccion == 5){
-                System.out.println("==========================");
+                System.out.println("=================================================");
                 System.out.println("Gracias, vuelva pronto.");
-                System.out.println("==========================");
+                System.out.println("=================================================");
                 bandera = 2;
             }
         } while (bandera != 2);
@@ -58,7 +63,6 @@ public abstract class Clase_Abstractaa {
 	public void Retiro(){
         retiro = entrada.nextInt();
     }
-    
     public void Deposito(){
         deposito = entrada.nextInt();
     }

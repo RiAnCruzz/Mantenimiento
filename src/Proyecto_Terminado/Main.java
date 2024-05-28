@@ -12,9 +12,9 @@ public class Main {
         System.out.println("Ingrese su Nip:		(8002)");
         int Nip = entrada.nextInt();
         System.out.println("----------------------------------------------------");
-        if(Nombre.equals("Catalina") && Num_cuenta.equals("23140972") && Nip==8002) {
+        if(Nombre.equals("C") && Num_cuenta.equals("2") && Nip==8) {
         	System.out.println("===============================================");
-        	System.out.print(Nombre);
+        	//System.out.print(Nombre);
             Clase_Abstractaa mesajero = new Consulta();
             mesajero.setSaldo(1700);
             mesajero.Operaciones();
