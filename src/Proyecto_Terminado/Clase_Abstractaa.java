@@ -3,6 +3,7 @@ package Proyecto_Terminado;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+
 public abstract class Clase_Abstractaa {
 	String numero_cuenta;
     protected int transacciones, retiro, deposito,transferencia;
@@ -69,7 +70,6 @@ public abstract class Clase_Abstractaa {
     public void Transferencia(){
         transferencia = entrada.nextInt();
     }
-    public abstract void Transacciones();
 
     public int getSaldo(){
         return saldo;
@@ -78,5 +78,7 @@ public abstract class Clase_Abstractaa {
     public void setSaldo(int saldo){
         this.saldo = saldo;
     }
-    
+    public abstract void Transacciones();
+
+
 }

@@ -20,5 +20,7 @@ public class Consulta extends Clase_Abstractaa{
         System.out.println("Se relalizo una Consulta el "+FechaActual);
         System.out.println("Tu saldo actual es: " + getSaldo());
         System.out.println("====================================");
-    }    
+    }
+
+
 }

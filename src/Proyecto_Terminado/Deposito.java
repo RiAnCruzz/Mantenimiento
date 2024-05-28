@@ -1,9 +1,8 @@
 package Proyecto_Terminado;
 
+//import Proyecto.Clase_Abstractaa;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-//import Proyecto.ClasePadre_Abstracta;
 
 public class Deposito extends Clase_Abstractaa{
     
