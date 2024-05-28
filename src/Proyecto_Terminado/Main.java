@@ -8,11 +8,8 @@ public class Main {
     static Locale defaultLocale = Locale.getDefault();
 
     public static void main(String[] args) {
-        System.out.println("País: " + defaultLocale.getCountry());
-        System.out.println("País: " + defaultLocale.getDisplayCountry());
-        
         System.out.println("====================================================");
-        System.out.println("                                                    ");
+        System.out.println("                                         "+ defaultLocale.getDisplayCountry() +" - "+ defaultLocale.getCountry());
         System.out.println("              B I E N V E N I D O    A              ");
         System.out.println("----------------------------------------------------");
         System.out.println("              GRUPO         FINANCIERO              ");
@@ -20,7 +17,6 @@ public class Main {
         System.out.println("----------------------------------------------------");
         System.out.println("       POR FAVOR INGRESA TU NUMERO DE TARJETA       ");   
         String Tarjeta = entrada.nextLine();
-
         if(Tarjeta.equals("1010101010101010")) {
             System.out.println("       POR FAVOR INGRESA TU CLAVE DE OPERADOR       ");
             String clave = entrada.nextLine();
@@ -41,9 +37,9 @@ public class Main {
     }
 
     public static void MensajeError(){
-        System.out.println("===============================================");
-        System.out.println("Alguno de sus datos es erroneo, intente denuevo");
-        System.out.println("===============================================");
+        System.out.println("====================================================");
+        System.out.println("  Alguno de sus datos es erroneo,  intente denuevo  ");
+        System.out.println("====================================================");
     }
 }
 
