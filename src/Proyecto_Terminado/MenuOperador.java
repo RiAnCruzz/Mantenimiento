@@ -1,17 +1,20 @@
 package Proyecto_Terminado;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class MenuOperador extends Clase_Abstractaa {
     static Scanner entrada = new Scanner(System.in);
+    static Locale Ubicacion = Locale.getDefault();
     private static String tarjeta;
     private static int nip;
     private static String cuenta;
     private static String nombre;
+    int bancoID = 1;
 
     @Override
     public void Transacciones() {
         System.out.println("====================================================");
-        System.out.println("                                                    ");
+        System.out.println("ID : " + bancoID + "                                   " + Ubicacion.getDisplayCountry() + " - " + Ubicacion.getCountry());
         System.out.println("              B I E N V E N I D O    A              ");
         System.out.println("----------------------------------------------------");
         System.out.println("              GRUPO         FINANCIERO              ");
@@ -38,29 +41,28 @@ public class MenuOperador extends Clase_Abstractaa {
     public static void registrarCliente() {
         MenuOperador menuOperador = new MenuOperador();
     
-        System.out.println("----------------------------------------------------");
-        System.out.println("Ingrese el Nombre del Cliente:");
+        
+        entrada.nextLine();
+        System.out.println("====================================================");
+        System.out.print("Ingrese el Nombre del Cliente:");
         String nombre = entrada.nextLine();
     
-        System.out.println("Ingrese el Número de Cuenta:");
+        System.out.print("Ingrese el Número de Cuenta:");
         String cuenta = entrada.nextLine();
     
-        System.out.println("Ingrese el número de tarjeta:");
+        System.out.print("Ingrese el número de tarjeta:");
         String numeroTarjeta = entrada.nextLine();
 
-        System.out.println("Ingrese el NIP:");
+        System.out.print("Ingrese el NIP:");
         int nip = entrada.nextInt();
-    
-        // Limpia el buffer de entrada
         entrada.nextLine();
     
-        // Actualiza los datos del cliente en el objeto menuOperador
         menuOperador.setNombre(nombre);
         menuOperador.setCuenta(cuenta);
         menuOperador.setTarjeta(numeroTarjeta);
         menuOperador.setNip(nip);
     
-        // Muestra los datos del cliente registrado
+        System.out.println("----------------------------------------------------");
         System.out.println("Cliente registrado exitosamente:");
         System.out.println("Nombre: " + nombre);
         System.out.println("Número de Cuenta: " + cuenta);
@@ -69,13 +71,12 @@ public class MenuOperador extends Clase_Abstractaa {
     
         // Regresa al menú principal
         System.out.println("====================================================");
-        System.out.println("Presione enter para volver al menú principal...");
+        System.out.println("  Presione enter para  volver al menú principal...  ");
         entrada.nextLine();
         System.out.println("====================================================");
-        menuOperador.Transacciones(); // Llamar al método Transacciones() para regresar al menú principal
+        menuOperador.Transacciones(); 
     }
     
-
     private void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }

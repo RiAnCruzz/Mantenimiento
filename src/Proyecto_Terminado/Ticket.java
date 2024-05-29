@@ -19,10 +19,19 @@ public class Ticket extends Clase_Abstractaa{
         System.out.println("              GRUPO         FINANCIERO              ");
         System.out.println("               BBVA         BANCOMER                ");
         System.out.println("----------------------------------------------------");
+        System.out.println("Fecha Hora");
+        System.out.println("----------------------------------------------------");
         System.out.println("                       Debito                       ");
-        System.out.println("Se relalizo una Consulta el "+FechaActual);
-        System.out.println("Tu saldo actual es: " + getSaldo());
-        System.out.println("====================================");
+        System.out.println("Numero de cliente      : ");
+        System.out.println("Numero de banco        : ");
+        System.out.println("Numero de banco        : ");
+        System.out.println("Tipo de transaccion    : ");
+        System.out.println("Monto de la operacion  : ");
+        System.out.println("----------------------------------------------------");
+        System.out.println("  Presione enter para  volver al menú principal...  ");
+        entrada.nextLine();
+        System.out.println("====================================================");
+
     }
 
 

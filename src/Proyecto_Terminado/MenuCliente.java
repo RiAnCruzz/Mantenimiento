@@ -1,11 +1,9 @@
 package Proyecto_Terminado;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class MenuCliente extends Clase_Abstractaa{
 
 	static Scanner entrada = new Scanner(System.in);
-
 
     @Override
     public void Transacciones() {
@@ -20,10 +18,9 @@ public class MenuCliente extends Clase_Abstractaa{
         int Nip = entrada.nextInt();
         System.out.println("----------------------------------------------------");
         if(Nip == MenuOperador.getNip()) {
-        	System.out.println("===============================================");
-            Clase_Abstractaa mesajero = new Consulta();
-            mesajero.setSaldo(1700);
-            mesajero.Operaciones();
+        	System.out.println("====================================================");
+            Clase_Abstractaa cliente = new Consulta();
+            cliente.Operaciones();
         }else {
         	System.out.println("===============================================");
             System.out.println("Alguno de sus datos es erroneo, intente denuevo");
