@@ -1,21 +1,18 @@
 package Proyecto_Terminado;
 
-import java.util.Locale;
 import java.util.Scanner;
 
-public class Main {
+public class Main{
 
     static Scanner entrada = new Scanner(System.in);
-    static Locale Ubicacion = Locale.getDefault();
     public static void main(String[] args) {
         boolean accesoConcedido = false;
-        int bancoID = 1;
-        Clase_Abstractaa operador = new MenuOperador();
-        operador.setBanco(bancoID);
-
+        Clase_Abstractaa banco = new ClaseBanco();
+        banco.Transacciones();
+        
         while (!accesoConcedido) {
             System.out.println("====================================================");
-            System.out.println("ID : " + operador.getBanco() + "                                   " + Ubicacion.getDisplayCountry() + " - " + Ubicacion.getCountry());
+            System.out.println("ID : " + banco.getBanco() +  "                                   " + banco.getUbicacion());
             System.out.println("              B I E N V E N I D O    A              ");
             System.out.println("----------------------------------------------------");
             System.out.println("              GRUPO         FINANCIERO              ");
@@ -29,7 +26,7 @@ public class Main {
                 String clave = entrada.nextLine();
                 if (clave.equals("1994")) {
                     System.out.println("====================================================");
-                    //Clase_Abstractaa operador = new MenuOperador();
+                    Clase_Abstractaa operador = new MenuOperador();
                     operador.Transacciones();
                     accesoConcedido = true;
                 } else {
@@ -53,4 +50,8 @@ public class Main {
         System.out.println("  Alguno de sus datos es erroneo,  intente denuevo  ");
         System.out.println("====================================================");
     }
+
+
+
+
 }

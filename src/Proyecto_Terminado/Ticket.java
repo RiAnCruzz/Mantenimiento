@@ -11,20 +11,26 @@ public class Ticket extends Clase_Abstractaa{
     public void Transacciones(){
 
         Date Fecha = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-        String FechaActual = sdf.format(Fecha);
- 
+        SimpleDateFormat FechaFor = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        String FechaTicket = FechaFor.format(Fecha);
+
+        Date Hora = new Date();
+        SimpleDateFormat HoraFor = new SimpleDateFormat("HH:mm:ss");
+        String HoraTicket = HoraFor.format(Hora);
+
+        //otener id de banco y pais
         System.out.println("====================================================");
         System.out.println("----------------------------------------------------");
         System.out.println("              GRUPO         FINANCIERO              ");
         System.out.println("               BBVA         BANCOMER                ");
         System.out.println("----------------------------------------------------");
-        System.out.println("Fecha Hora");
+        System.out.println("----------------------PAIS--------------------------");
+        System.out.println("                                                    ");
+        System.out.println(  "ID cajero              : "+FechaTicket);
+        System.out.println(  "Fecha                  : "+FechaTicket);
+        System.out.println(  "Hora                   : "+HoraTicket);
         System.out.println("----------------------------------------------------");
-        System.out.println("                       Debito                       ");
         System.out.println("Numero de cliente      : ");
-        System.out.println("Numero de banco        : ");
-        System.out.println("Numero de banco        : ");
         System.out.println("Tipo de transaccion    : ");
         System.out.println("Monto de la operacion  : ");
         System.out.println("----------------------------------------------------");

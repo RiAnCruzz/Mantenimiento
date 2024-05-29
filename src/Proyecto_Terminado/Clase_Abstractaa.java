@@ -4,13 +4,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+
 public abstract class Clase_Abstractaa {
-    String numero_cuenta;
+    Scanner entrada = new Scanner(System.in);
+    String numero_cuenta,Ubicacion;
     protected int transacciones, retiro, deposito, transferencia, banco;
     private int saldo;  // Cambiado de static a instancia
-    Scanner entrada = new Scanner(System.in);
 
     public void Operaciones() {
+        
         int bandera = 0;
         int seleccion = 0;
         Date Fecha = new Date();
@@ -30,12 +32,12 @@ public abstract class Clase_Abstractaa {
                 System.out.println(" Por favor seleccione una opción:");
                 System.out.println("    1. Consulta de saldo.");
                 System.out.println("    2. Retiro de efectivo.");
-                System.out.println("    3. Depósito de efectivo.");
-                System.out.println("    4. Hacer una transferencia.");
-                System.out.println("    5. Salir.");
+                //System.out.println("    3. Depósito de efectivo.");
+                System.out.println("    3. Hacer una transferencia.");
+                System.out.println("    4. Salir.");
                 seleccion = entrada.nextInt();
 
-                if (seleccion >= 1 && seleccion <= 5) {
+                if (seleccion >= 1 && seleccion <= 4) {
                     bandera = 1;
                 } else {
                     System.out.println("=================================================");
@@ -51,12 +53,9 @@ public abstract class Clase_Abstractaa {
                 Clase_Abstractaa mensajero = new Retiro(Nombre, Nombre, seleccion);
                 mensajero.Transacciones();
             } else if (seleccion == 3) {
-                Clase_Abstractaa mensajero = new Deposito();
+                Clase_Abstractaa mensajero = new Transferencia();
                 mensajero.Transacciones();
             } else if (seleccion == 4) {
-                Clase_Abstractaa mensajero = new Transferencia(Nombre, Nombre, Nombre, seleccion);
-                mensajero.Transacciones();
-            } else if (seleccion == 5) {
                 System.out.println("=================================================");
                 System.out.println("Gracias, vuelva pronto.");
                 System.out.println("=================================================");
@@ -95,6 +94,14 @@ public abstract class Clase_Abstractaa {
 
     public int getBanco() {
         return banco;
+    }
+
+    public void setUbicacion(String Ubicacion) {
+        this.Ubicacion = Ubicacion;
+    }
+
+    public String getUbicacion() {
+        return Ubicacion;
     }
 
     public abstract void Transacciones();
