@@ -7,12 +7,10 @@ public class Main{
     static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) {
         boolean accesoConcedido = false;
-        Clase_Abstractaa banco = new ClaseBanco();
-        banco.Transacciones();
         
         while (!accesoConcedido) {
             System.out.println("====================================================");
-            System.out.println("ID : " + banco.getBanco() +  "                                   " + banco.getUbicacion());
+            //System.out.println("ID : " + banco.getBanco() +  "                                   " + banco.getUbicacion());
             System.out.println("              B I E N V E N I D O    A              ");
             System.out.println("----------------------------------------------------");
             System.out.println("              GRUPO         FINANCIERO              ");

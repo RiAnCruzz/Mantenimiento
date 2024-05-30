@@ -5,17 +5,11 @@ import java.util.Scanner;
 public class MenuCliente extends Clase_Abstractaa {
 
     static Scanner entrada = new Scanner(System.in);
-    Clase_Abstractaa operador = new MenuCliente();
-    Clase_Abstractaa banco = new ClaseBanco();
-
-    public MenuCliente() {
-        banco.Transacciones();
-    }
 
     @Override
     public void Transacciones() {
         System.out.println("====================================================");
-        System.out.println("ID : " + banco.getBanco() +  "                                   " + banco.getUbicacion());
+        //System.out.println("ID : " + banco.getBanco() +  "                                   " + banco.getUbicacion());
         System.out.println("                                                    ");
         System.out.println("              B I E N V E N I D O    A              ");
         System.out.println("----------------------------------------------------");
@@ -27,8 +21,9 @@ public class MenuCliente extends Clase_Abstractaa {
         System.out.println("----------------------------------------------------");
         if(Nip == MenuOperador.getNip()) {
             System.out.println("====================================================");
-            Clase_Abstractaa cliente = new Consulta();
-            cliente.Operaciones();
+            Clase_Abstractaa mesajero = new Consulta();
+            mesajero.setSaldo(1700);
+            mesajero.Operaciones();
         } else {
             System.out.println("===============================================");
             System.out.println("Alguno de sus datos es erroneo, intente denuevo");

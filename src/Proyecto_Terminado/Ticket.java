@@ -18,6 +18,8 @@ public class Ticket extends Clase_Abstractaa{
         SimpleDateFormat HoraFor = new SimpleDateFormat("HH:mm:ss");
         String HoraTicket = HoraFor.format(Hora);
 
+
+
         //otener id de banco y pais
         System.out.println("====================================================");
         System.out.println("----------------------------------------------------");
@@ -26,7 +28,7 @@ public class Ticket extends Clase_Abstractaa{
         System.out.println("----------------------------------------------------");
         System.out.println("----------------------PAIS--------------------------");
         System.out.println("                                                    ");
-        System.out.println(  "ID cajero              : "+FechaTicket);
+        System.out.println(  "ID cajero              : "+banco);
         System.out.println(  "Fecha                  : "+FechaTicket);
         System.out.println(  "Hora                   : "+HoraTicket);
         System.out.println("----------------------------------------------------");

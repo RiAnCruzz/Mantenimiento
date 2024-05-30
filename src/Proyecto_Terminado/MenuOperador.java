@@ -12,16 +12,10 @@ public class MenuOperador extends Clase_Abstractaa {
     private static String tipo;
 
     Clase_Abstractaa operador = new MenuCliente();
-    Clase_Abstractaa banco = new ClaseBanco();
-
-    public MenuOperador() {
-        banco.Transacciones(); // Movemos la llamada aquí
-    }
 
     @Override
     public void Transacciones() {
         System.out.println("====================================================");
-        System.out.println("ID : " + banco.getBanco() +  "                                   " + banco.getUbicacion());
         System.out.println("              B I E N V E N I D O    A              ");
         System.out.println("----------------------------------------------------");
         System.out.println("              GRUPO         FINANCIERO              ");
@@ -90,15 +84,18 @@ public class MenuOperador extends Clase_Abstractaa {
         menuOperador.setTipo(tipo);
         menuOperador.setTarjeta(numeroTarjeta);
         menuOperador.setNip(nip);
+        menuOperador.setSaldo(500);
+
     
         System.out.println("----------------------------------------------------");
         System.out.println("         C L I E N T E    R E G I S T R A D O       ");
         System.out.println("----------------------------------------------------");
-        System.out.println("Número de Cuenta: " + MenuOperador.getCuenta());
-        System.out.println("Nombre: " + MenuOperador.getNombre());
-        System.out.println("Domicilio: " + MenuOperador.getDomicilio());
-        System.out.println("Tipo de cuenta: " + MenuOperador.getTipo());
+        System.out.println("Número de Cuenta : " + MenuOperador.getCuenta());
+        System.out.println("Nombre           : " + MenuOperador.getNombre());
+        System.out.println("Domicilio        : " + MenuOperador.getDomicilio());
+        System.out.println("Tipo de cuenta   : " + MenuOperador.getTipo());
         System.out.println("Número de Tarjeta: " + MenuOperador.getTarjeta());
+
         System.out.println("----------------------------------------------------");
         System.out.println("  Presione enter para  volver al menú principal...  ");
         entrada.nextLine();
