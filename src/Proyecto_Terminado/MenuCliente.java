@@ -22,7 +22,6 @@ public class MenuCliente extends Clase_Abstractaa {
         if(Nip == MenuOperador.getNip()) {
             System.out.println("====================================================");
             Clase_Abstractaa mesajero = new Consulta();
-            setSaldo(2000);
             mesajero.Operaciones();
         } else {
             System.out.println("===============================================");

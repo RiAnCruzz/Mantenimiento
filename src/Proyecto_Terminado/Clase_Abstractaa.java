@@ -18,7 +18,6 @@ public abstract class Clase_Abstractaa {
         Date Fecha = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         String FechaActual = sdf.format(Fecha);
-        String Nombre = "";
         do {
             do {
                 System.out.println("====================================================");
@@ -32,7 +31,6 @@ public abstract class Clase_Abstractaa {
                 System.out.println(" Por favor seleccione una opción:");
                 System.out.println("    1. Consulta de saldo.");
                 System.out.println("    2. Retiro de efectivo.");
-                //System.out.println("    3. Depósito de efectivo.");
                 System.out.println("    3. Hacer una transferencia.");
                 System.out.println("    4. Salir.");
                 seleccion = entrada.nextInt();

@@ -11,6 +11,11 @@ public class Retiro extends Clase_Abstractaa {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         String FechaActual = sdf.format(Fecha);
         int tipo = 1;
+
+        Retiro retiroa = new Retiro(getSaldo());
+
+        
+        System.out.println(retiroa);
         System.out.println("====================================================");
         System.out.println("              B I E N V E N I D O    A              ");
         System.out.println("----------------------------------------------------");
@@ -38,5 +43,9 @@ public class Retiro extends Clase_Abstractaa {
         System.out.println("Fecha y hora: " + FechaActual);
         System.out.println("----------------------------------------------------");
 
+    }
+
+    public Retiro(int saldo) {
+        setSaldo(saldo); 
     }
 }
