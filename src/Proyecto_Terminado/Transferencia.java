@@ -1,20 +1,19 @@
 package Proyecto_Terminado;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner;
 
 public class Transferencia extends Clase_Abstractaa {
 
 
     @Override
     public void Transacciones() {
-        Scanner entrada = new Scanner(System.in);
-
-        Transferencia();   
-
         Date Fecha = new Date();     
         SimpleDateFormat FechaFor = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         String FechaTicket = FechaFor.format(Fecha);
+
+
+        System.out.print("Cuanto quieres Transferir: ");
+        Transferencia();   
 
         if (transferencia <= getSaldo()) {
             transacciones = getSaldo();
@@ -30,7 +29,7 @@ public class Transferencia extends Clase_Abstractaa {
             System.out.println("A la cuenta :             "+numero_cuenta);
             System.out.println("transferiste : " + transferencia);
             System.out.println("Tu saldo actual es: " + getSaldo());
-            System.out.println("====================================");
+            System.out.println("----------------------------------------------------");
             System.out.println("Seleccione una opción:");
             System.out.println("1. Generar ticket");
             System.out.println("2. Volver al menú principal");
@@ -47,10 +46,11 @@ public class Transferencia extends Clase_Abstractaa {
                     System.out.println("Opción no válida");
                     break;
             }
+            System.out.println("----------------------------------------------------");
         } else {
-            System.out.println("=====================");
-            System.out.println("Saldo insuficiente");
-            System.out.println("=====================");
+            System.out.println("====================================================");
+            System.out.println("                Saldo insuficiente.                 ");
+            System.out.println("====================================================");
        
     
         }

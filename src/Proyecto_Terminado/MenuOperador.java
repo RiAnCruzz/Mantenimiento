@@ -104,7 +104,7 @@ public class MenuOperador extends Clase_Abstractaa {
     }
     
     private void setCuenta(String cuenta) {
-        this.cuenta = cuenta;
+        MenuOperador.cuenta = cuenta;
     }
 
     public static String getCuenta() {
@@ -112,7 +112,7 @@ public class MenuOperador extends Clase_Abstractaa {
     }
 
     private void setNombre(String nombre) {
-        this.nombre = nombre;
+        MenuOperador.nombre = nombre;
     }
 
     public static String getNombre() {
@@ -120,7 +120,7 @@ public class MenuOperador extends Clase_Abstractaa {
     }
 
     private void setDomicilio(String domicilio) {
-        this.domicilio = domicilio;
+        MenuOperador.domicilio = domicilio;
     }
 
     public static String getDomicilio() {
@@ -128,7 +128,7 @@ public class MenuOperador extends Clase_Abstractaa {
     }
 
     private void setTipo(String tipo) {
-        this.tipo = tipo;
+        MenuOperador.tipo = tipo;
     }
 
     public static String getTipo() {
@@ -136,7 +136,7 @@ public class MenuOperador extends Clase_Abstractaa {
     }
 
     public void setTarjeta(String tarjeta) {
-        this.tarjeta = tarjeta;
+        MenuOperador.tarjeta = tarjeta;
     }
 
     public static String getTarjeta() {
@@ -144,7 +144,7 @@ public class MenuOperador extends Clase_Abstractaa {
     }
 
     public void setNip(int nip) {
-        this.nip = nip;
+        MenuOperador.nip = nip;
     }
     
     public static int getNip() {

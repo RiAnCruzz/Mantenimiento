@@ -2,46 +2,41 @@ package Proyecto_Terminado;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner;
 
 public class Retiro extends Clase_Abstractaa {
-    
-	private String cuenta;
-    private String tipo;
-    private int monto;
-
-    Scanner entrada = new Scanner(System.in);
-
-    public Retiro(String cuenta, String tipo, int monto) {
-        this.cuenta = cuenta;
-        this.tipo = tipo;
-        this.monto = monto;
-    }
 
     @Override
     public void Transacciones() {
         Date Fecha = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         String FechaActual = sdf.format(Fecha);
+        int tipo = 1;
+        System.out.println("====================================================");
+        System.out.println("              B I E N V E N I D O    A              ");
+        System.out.println("----------------------------------------------------");
+        System.out.println("              GRUPO         FINANCIERO              ");
+        System.out.println("               BBVA         BANCOMER                ");
+        System.out.println("----------------------------------------------------");
 
-        System.out.println("====================================");
-        System.out.println("=================BBVA===============");
-        System.out.println("				Debito				");
-        System.out.println("Cuenta: " + cuenta);
+        System.out.println("                     Retiro                         ");
+        System.out.println("Cuenta: " );
         System.out.println("Tipo: " + tipo);
-        System.out.println("Monto a retirar: " + monto);
-        System.out.println("Fecha y hora: " + FechaActual);
-        System.out.println("====================================");
+        System.out.print("Monto a retirar: ");
+        Retiro();
 
-        if (monto <= getSaldo()) {
+        if (retiro <= getSaldo()) {
             transacciones = getSaldo();
-            setSaldo(transacciones - monto);
-            System.out.println("Retiraste : " + monto);
+            setSaldo(transacciones - retiro);
+            System.out.println("Retiraste : " + retiro);
             System.out.println("Tu saldo actual es: " + getSaldo());
+            System.out.println("====================================");
         } else {
-            System.out.println("=====================");
-            System.out.println("Saldo insuficiente.");
-            System.out.println("=====================");
+            System.out.println("====================================================");
+            System.out.println("                Saldo insuficiente.                 ");
+            System.out.println("====================================================");
         }
+        System.out.println("Fecha y hora: " + FechaActual);
+        System.out.println("----------------------------------------------------");
+
     }
 }

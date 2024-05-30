@@ -41,7 +41,7 @@ public abstract class Clase_Abstractaa {
                     bandera = 1;
                 } else {
                     System.out.println("=================================================");
-                    System.out.println("Opción no disponible, vuelva a intentar por favor.");
+                    System.out.println("Opción no disponible, vuelva a intentar por favor");
                     System.out.println("=================================================");
                 }
             } while (bandera == 0);
@@ -50,7 +50,7 @@ public abstract class Clase_Abstractaa {
                 Clase_Abstractaa mensajero = new Consulta();
                 mensajero.Transacciones();
             } else if (seleccion == 2) {
-                Clase_Abstractaa mensajero = new Retiro(Nombre, Nombre, seleccion);
+                Clase_Abstractaa mensajero = new Retiro();
                 mensajero.Transacciones();
             } else if (seleccion == 3) {
                 Clase_Abstractaa mensajero = new Transferencia();
